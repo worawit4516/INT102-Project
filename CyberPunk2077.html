@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CyberPunk2077</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css?family=Tomorrow&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Mitr&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Chakra+Petch&display=swap" rel="stylesheet">
+
+</head>
+
+<body style="background-color: black;">
+
+    <ul>
+        <li><a href="About.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="News.html">News</a></li>
+        <li><a href="index.html">Home</a></li>
+
+    </ul>
+
+    <a href="index.html"><img src="images/LOGO04.png" width="9%" style="margin-top: -100px; margin-left: 30px;"></a>
+
+
+    <!-- Slide images  3 รูปบน-->
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="images/Cyberpunk/Cyberpunk 2.4.jpg" style="width:100%">
+            <div class="text"></div></a>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="images/Cyberpunk/Cyberpunk page1.jpg" style="width:100%">
+            <div class="text"></div></a>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="images/Cyberpunk/Cyberpunk page2.1.2.jpg " style="width:100%">
+            <div class="text"></div></a>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+
+    <script>
+
+        var slideIndex = 1;
+
+        var myTimer;
+
+        var slideshowContainer;
+
+        window.addEventListener("load", function () {
+            showSlides(slideIndex);
+            myTimer = setInterval(function () { plusSlides(1) }, 4000);
+
+
+            slideshowContainer = document.getElementsByClassName('slideshow-inner')[0];
+
+
+
+            slideshowContainer.addEventListener('mouseenter', pause)
+            slideshowContainer.addEventListener('mouseleave', resume)
+        })
+
+
+        function plusSlides(n) {
+            clearInterval(myTimer);
+            if (n < 0) {
+                showSlides(slideIndex -= 1);
+            } else {
+                showSlides(slideIndex += 1);
+            }
+
+
+
+            if (n === -1) {
+                myTimer = setInterval(function () { plusSlides(n + 2) }, 4000);
+            } else {
+                myTimer = setInterval(function () { plusSlides(n + 1) }, 4000);
+            }
+        }
+
+
+        function currentSlide(n) {
+            clearInterval(myTimer);
+            myTimer = setInterval(function () { plusSlides(n + 1) }, 4000);
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+
+        pause = () => {
+            clearInterval(myTimer);
+        }
+
+        resume = () => {
+            clearInterval(myTimer);
+            myTimer = setInterval(function () { plusSlides(slideIndex) }, 4000);
+        }
+    </script>
+    
+<center> <p class="datahead"> Story </p>
+</center> 
+    <div class="info">
+
+        &nbsp; &nbsp; &nbsp;จะเดินตามฉากชีวิตของ “V” นักรับจ้างฟรีแลนซ์ที่ดิ้นรนเอาตัวรอดอยู่ในมหานคร Night City
+        เมืองในรัฐแคลิฟอร์เนียร์ที่มีอัตราการเกิดอาชญากรรมสูงที่สุดในโลก V คือฟรีแลนเซอร์ที่รับงานสารพัด
+        ไม่ว่าจะเป็นงานสุจริตหรืองานเปื้อนเลือด และยังยินดีรับงานจากผู้จ้างทุกรูปแบบใน Night City
+        ไล่ตั้งแต่แก๊งนักเลงข้างถนน นายหน้าค้าแก็ดเจ็ตไฮเทค ไปจนถึงเจ้าหน้าที่จากบริษัทข้ามชาติขนาดยักษ์
+
+    </div>
+
+    <br><br><br><br><br>
+    <div class="info" >
+        &nbsp; &nbsp; &nbsp;หากวันหนึ่งคุณตื่นขึ้นมาแล้วพบว่าลูกตาข้างหนึ่งของคุณกลายเป็นโลหะเย็นเฉียบ
+        แขนของคุณถูกดัดแปลงให้กางออกได้เพื่อปลดปล่อยเคียวเหล็กคมกริบ
+        ทุกวันคุณต้องออกไปท่องโลกยามวิกาลที่เต็มไปด้วยหลอดไฟนีออนสารพัดสี
+        ส่งแสงตัดกับความมืดของตึกแถวแออัดที่เต็มไปด้วยประชากรครึ่งคนครึ่งเหล็ก
+        ทุกตรอกซอยต่างมีโอกาสทำเงินและภัยอันตรายซ่อนเร้นอยู่ มันฟังดูเป็นชีวิตที่ไม่น่าอภิรมย์เลยใช่มั้ย?
+        แต่สำหรับเกมเมอร์มันกลับเป็นชีวิตที่เต็มไปด้วยเรื่องราวตื่นเต้นกระตุ้นต่อมอะดรีนาลีน ยินดีต้อนรับสู่โลกแห่ง
+        Cyberpunk ยินดีต้อนรับสู่มหานคร Night City
+    </div><br><br>
+    <center><img class="Photo" img src="images/Cyberpunk/Extra03.jpg" style="width:60%; border-radius: 20px;"></center>
+
+    <br><br><br><br><br>
+    <div class="info" >
+        &nbsp; &nbsp; &nbsp;V เป็นตัวละครที่คุณจะได้ปั้นขึ้นมาเองกับมือ คุณจะได้เลือกตั้งแต่เพศ บรรทัดฐานความดีความชั่ว
+        บุคลิกส่วนตัว และปูมหลังของเขาหรือเธอว่าอะไรคือสาเหตุที่ทำให้ V ย้ายเข้ามาสู่เมืองนี้ หรือหากอยากให้ V
+        เกิดและอาศัยอยู่ในเมืองนี้มาตั้งแต่เด็กก็ย่อมได้ ทุกการกระทำของ V
+        จะขึ้นอยู่กับการตัดสินใจของตัวคุณเองและมันจะสร้างผลกระทบแก่นคร Night City ไม่มากก็น้อย
+        รวมถึงยังกระทบกับจุดยืนของ V ในสายตาของตัวละครอื่นด้วย
+        การตัดสินใจบางอย่างอาจทำให้ตัวละครหลักบางตัวหายหน้าไปเลยซึ่งจะทำให้เนื้อเรื่องของ V เปลี่ยนไปอย่างสิ้นเชิง
+        เรียกได้ว่าคุณอยากให้ V เป็นใคร โหดเลวดีแค่ไหนก็สามารถกำหนดได้หมด
+        ซึ่งจุดนี้น่าจะถูกใจเกมเมอร์ที่ชอบเคลียร์เกมหลายรอบเป็นแน่
+    </div>
+
+   
+<center>  <p class="datahead"> Gameplay </p>
+</center> 
+
+    <br>
+    <div class="info" >
+        &nbsp; &nbsp; &nbsp;เปิดโลกใหม่ในมุมมอง FPS เพราะพวกเขาคิดว่ามุมมองนี้จะทำให้เกมเมอร์ “อิน” กับเกมมากที่สุด
+        เห็นรายละเอียดยิบย่อยที่แฝงอยู่ตามตึกรามบ้านช่องมากที่สุด
+        และตื่นตะลึงไปกับกราฟิกของเมืองอนาคตสุดอลังการที่จะทำให้คุณอ้าปากค้างกว้างที่สุด
+    </div>
+
+    <br><br><br><br><br>
+    <div class="info" >
+        &nbsp; &nbsp; &nbsp;เกมเมอร์จะได้ออกไปชื่นชมทุกตรอกซอกซอยของเมือง Night City ตามใจต้องการ
+        เนื่องจากแผนที่ในเกมนี้เปิดกว้างแบบ Open World เต็มที่
+        ดังนั้นคุณจะเลือกไปที่ไหนก่อนที่ไหนหลังก็ถือเป็นเรื่องของคุณ แถมคุณยังสามารถเลือกได้เองว่าจะเดินไปทำภารกิจ
+        จะขี่มอเตอร์ไซค์ไป จะบึ่งรถซิ่งสุดเฟี้ยวไป หรือจะบังคับยานเหาะบินไปเลยก็ได้ถ้าคุณมีตังค์ซื้อ
+    </div> <br><br><br>
+    <center><img class="Photo" img src="images/Cyberpunk/Extra01.jpg" style="width:60%;border-radius: 20px;"></center>
+
+    <br><br><br><br><br>
+    <div class="info">
+        &nbsp; &nbsp; &nbsp;เกมเมอร์จะได้ออกไปชื่นชมทุกตรอกซอกซอยของเมือง Night City ตามใจต้องการ
+        เนื่องจากแผนที่ในเกมนี้เปิดกว้างแบบ Open World เต็มที่
+        ดังนั้นคุณจะเลือกไปที่ไหนก่อนที่ไหนหลังก็ถือเป็นเรื่องของคุณ แถมคุณยังสามารถเลือกได้เองว่าจะเดินไปทำภารกิจ
+        จะขี่มอเตอร์ไซค์ไป จะบึ่งรถซิ่งสุดเฟี้ยวไป หรือจะบังคับยานเหาะบินไปเลยก็ได้ถ้าคุณมีตังค์ซื้อ
+    </div>
+
+    <br><br><br><br><br>
+    <div class="info" >
+        &nbsp; &nbsp; &nbsp;อย่างไรก็ตาม ถึงแม้ Cyberpunk 2077 จะดูเหมือนเกม FPS
+        แต่รับประกันได้เลยว่าแก่นแท้ของมันคือเกม RPG 99.99%
+        นั่นหมายความว่าการยิงหัวเก่งไม่ได้การันตีว่าคุณจะสามารถเก็บศัตรูได้เร็วขึ้นเสมอไป ค่าพลังโจมตีทั้งหลาย
+        (รวมถึงการกระทำอื่นๆ) จะขึ้นอยู่กับค่าสถิติ (Stat) ของ V ทั้งสิ้น ยิ่ง V สร้างผลงานมากเท่าไหร่ก็จะยิ่งมีค่าพลัง
+        อาวุธปืน ดาบ และแก็ดเจ็ตไฮเทคให้ใช้มากขึ้น ทั้งหมดทั้งมวลนี้จะช่วยให้สไตล์การเล่นของคุณสมบูรณ์แบบขึ้นไปอีก
+    </div>
+
+    <br><br><br><br><br>
+    <div class="info" >
+        &nbsp; &nbsp; &nbsp;
+        CD Projekt RED พยายามสร้างระบบ Multiplayer ให้มีเนื้อหาเชื่อมโยงกับ Lore เกม เพื่อมอบประสบการณ์การเล่นเกมแบบใหม่
+        และทีมงานเชื่อว่า “เนื้อเรื่อง” ยังเป็นส่วนสำคัญที่เกม Cyberpunk 2077 ขาดไปไม่ได้
+
+    </div> <br><br><br>
+    <center><img class="Photo" img src="images/Cyberpunk/Extra02.jpg" style="width:60%; border-radius: 20px;"></center>
+
+    <br><br><br><br><br>
+    <div class="info" >
+        &nbsp; &nbsp; &nbsp;
+        สิ่งที่ผู้เล่นหลายคนคาดหวังจากเกม Open World แบบกว้างใหญ่จัดเต็มนั่นก็คือเควสของเกมที่มีความหลากหลาย
+        ซึ่งหลายเกมก็เลยหนทางสบายในการใช้ระบบสุ่มเควสที่จะได้เจอ และส่วนใหญ่เกมที่ใช้ระบบนี้มักจะให้เควสที่ซ้ำๆ
+        กันมาค่อนข้างมาก แต่สำหรับ Cyberpunk 2077 จะไม่เป็นเช่นกัน
+        เพราะทุกเควสในเกมจะถูกสร้างขึ้นด้วยฝีมือของผู้พัฒนาในทีมทั้งหมด
+
+    </div>
+
+    <br><br><br><br><br>
+    <div class="info" style="font-size: 30px;">
+        &nbsp; &nbsp; &nbsp;
+    </div>
+
+    <center>
+        <div class="thankyou">
+            ขอขอบคุณข้อมูลจาก<br>
+            <a class="facebook"
+                href="https://www.beartai.com/article/game-article/265750">www.beartai.com/article/game-article/265750</a>
+        </div>
+    </center>
+
+    <br>
+    <center><img src="images/Cyberpunk/Cyberpunk logo 2.webp" width="20%"></center>
+    <br>
+</body>
+
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Call of duty : Modern Warfare</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css?family=Tomorrow&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Chakra+Petch&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Mitr&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body style="background-color: black;">
+
+    <ul>
+        <li><a href="About.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="News.html">News</a></li>
+        <li><a href="Main.html">Home</a></li>
+
+    </ul>
+
+    <a href="Main.html"><img src="images/LOGO04.png" width="9%" style="margin-top: -100px; margin-left: 30px;"></a>
+
+    <br>
+    <div class="colum" style="margin-left: 200px;">
+        &nbsp; &nbsp; Call of duty : Modern Warfare <br>
+        "เกม FPS สุดเก๋ากลับมา รันวงการอีกครั้ง"
+    </div>
+
+    <center><img class="linecolum" img src="images/เส้น.png" style="width:72%"></center>
+
+    <br> <br> <br>
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="images/Call of duty/call-of-duty page 2.1.jpg " style="width:100%">
+            <div class="text"></div>
+            </a>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="images/Call of duty/Call-of-Duty-Modern-Warfare page 2.2.png.jpg" style="width:100%">
+            <div class="text"></div>
+            </a>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="images/Call of duty/callofduduty page1.jpg" style="width:100%">
+            <div class="text"></div>
+            </a>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div><br>
+
+    <script>
+
+        var slideIndex = 1;
+
+        var myTimer;
+
+        var slideshowContainer;
+
+        window.addEventListener("load", function () {
+            showSlides(slideIndex);
+            myTimer = setInterval(function () { plusSlides(1) }, 4000);
+
+
+            slideshowContainer = document.getElementsByClassName('slideshow-inner')[0];
+
+
+
+            slideshowContainer.addEventListener('mouseenter', pause)
+            slideshowContainer.addEventListener('mouseleave', resume)
+        })
+
+
+        function plusSlides(n) {
+            clearInterval(myTimer);
+            if (n < 0) {
+                showSlides(slideIndex -= 1);
+            } else {
+                showSlides(slideIndex += 1);
+            }
+
+
+
+            if (n === -1) {
+                myTimer = setInterval(function () { plusSlides(n + 2) }, 4000);
+            } else {
+                myTimer = setInterval(function () { plusSlides(n + 1) }, 4000);
+            }
+        }
+
+
+        function currentSlide(n) {
+            clearInterval(myTimer);
+            myTimer = setInterval(function () { plusSlides(n + 1) }, 4000);
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+
+        pause = () => {
+            clearInterval(myTimer);
+        }
+
+        resume = () => {
+            clearInterval(myTimer);
+            myTimer = setInterval(function () { plusSlides(slideIndex) }, 4000);
+        }
+    </script>
+
+    <br><br><br>
+    <div class="info" >
+        &nbsp;&nbsp;ต้องยอมรับว่า Call of Duty เป็นชื่อเกมที่ทรงอิทธิพลต่อเกมเมอร์ทั่วโลก โดยเฉพาะเกมเมอร์สาย FPS
+        ด้วยแล้ว ไม่ต้องบอกเลยว่ามันเกมในใจของใครหลายๆ คน และในปีนี้การมาของ Call of Duty Modern Warfare
+        เวอร์ชั่นรีบูทที่คราวนี้ได้ทางสตูดิโอสุดอหังการอย่าง Infinity Ward มากุมบังเหียน
+        ยิ่งทำให้ผมไม่พลาดที่จะต้องเล่นเกมนี้ให้จงได้ และหลังจากได้ลองเล่นกว่า 10 ชั่วโมง บอกได้แต่เพียงสั้นๆ ว่า
+        "ไม่ทำให้ผิดหวังเลยจริงๆ" โดยตัวเกม Call of Duty Modern Warfare จะมีอะไรน่าสนใจบ้าง
+        ตามไปดูรายละเอียดพร้อมกันครับ
+    </div>
+
+    <br><br><br><br><br>
+    <div class="info" >
+        &nbsp;&nbsp;ตัวเกมบอกเล่าเรื่องราวที่ยอดเยี่ยม
+        ตัวเกมจะบอกเล่าถึงสงครามการต่อต้านเหล่าผู้ก่อการร้ายในยุคปัจจุบัน ผ่านกองกำลังทหารหน่วยปฏิบัติการพิเศษ CIA
+        และหน่วยนาวิกโยธินทำภารกิจที่ได้รับมอบหมายไปทั่วโลก
+        เนื้อเรื่องมีคความเข้มข้นและมีบ้างในบางภารกิจที่อาจจะต้องมีการตัดสินใจบางอย่างที่ขัดศีลธรรม
+    </div>
+    <br><br><br>
+    <center><img class="Photo" img src="images/Call of duty/1.png" style="width:60%; border-radius: 20px;"></center>
+    <br><br><br><br><br>
+    <div class="info" >
+        &nbsp;&nbsp;ส่วนการบอกเล่าเรื่องราวภายในเกม ถืออีกหนึ่งจุดเด่นของเกม Call of Duty Modern Warfare โดยในภาคนี้
+        เรื่องราวต่างๆ ที่เกิดขึ้นถูกถักทอและถ่ายทอดออกมาได้อย่างมีจังหวะจะโคน แบบว่าถูกที่ถูกเวลา
+        คัทซีนและบทการสนทนาของตัวเอกอย่างกัปตัน ไพรซ์ มันให้ข้อคิดอะไร หลายๆ อย่าง
+        ช่วยให้ผมรู้สึกอินไปกับการเล่นได้เป็นอย่างดี ส่วนตอนจบก็สร้างความประหลาดใจให้กับผู้เล่นแน่นอน
+        ส่วนจะเป็นอย่างไรนั้นคงต้องไปเล่นกันเอาเอง
+    </div>
+
+    <br><br><br><br><br>
+    <div class="info">
+        &nbsp;&nbsp;เกมเพลย์อีกหนึ่งจุดเด่นหลัก
+        เกมเพลย์โดยรวมของ Call of Duty: Modern Warfare นั้นมีเสน่ห์และมีความเป็นเอกลักษณ์เฉพาะตัวที่สูงมากๆ
+        เรียกว่าถูกใจคอเกมซีรี่ส์ Call of Duty เนื่องจากมันเข้าถึงง่าย เล่นสนุก เร้าใจในทุกๆ ช่วงเวลา การวิ่ง การสไลด์
+        หรือเคลื่อนที่เข้าที่กำบังของตัวละครดูลื่นไหลและสมจริงมากยิ่งขึ้น
+        มีอยู่หลายระบบที่พัฒนาให้ดีขึ้นกว่าเกมในซีรี่ส์ Call Of Duty ภาคเก่าๆ
+    </div><br><br>
+    <center><img class="Photo" img src="images/Call of duty/2.png" style="width:60%; border-radius: 20px;"></center>
+    <br><br><br><br><br><br>
+    <div class="info" >
+        &nbsp;&nbsp;ส่วนการได้ร่วมรบเคียงบ่า เคียงไหล่กับกัปตัน ไพรซ์อีกครั้งเป็นรู้สึกที่สุดยอดเลยละ
+        แต่จะมีข้อติติงเล็กน้อยในเรื่องระบบปัญญาประดิษฐ์ภายในเกมที่ดูเหมือนว่ายังไม่ได้พัฒนาเท่าที่ควร คือ
+        บางทีศัตรูก็เดินออกมาให้ยิงง่ายๆ หรือเพื่อนร่วมทีมก็ทำอะไรที่ผิดพลาดอย่างไม่น่าให้อภัย เป็นต้น
+        แต่โดยรวมแล้วถือว่าเกมเพลย์ในภาคนี้ทำออกมาได้ยอดเยี่ยมครับ
+    </div><br><br><br>
+    <center><img class="Photo" img src="images/Call of duty/3.png" style="width:60%; border-radius: 20px;"></center>
+    <br><br><br><br><br>
+    <div class="info" >
+        &nbsp;&nbsp;กราฟิกสุดอลัง สวยงาม สมจริง
+        ระบบกราฟิกและระบบเสียงภายในเกมถูกรังสรรค์ออกมาได้ดี ทางทีมผู้พัฒนาเก็บรายละเอียดต่างๆ ภายในฉากได้อย่างยอดเยี่ยม
+        การฟิกภายในเกมมีความสวยงามสมจริง รวมถึงภาพฉากการต่อสู้ ระเบิดภูเขา เผากระท่อมที่เร้าใจ รายละเอียดของสมรภูมิต่างๆ
+        ออกแบบมาได้อย่างดี เสียงปืน เอฟเฟ็กต์ต่างๆ ระบบแสงเงา ฟิสิกส์ อนิเมชั่นตัวละคร
+        รวมทั้งเสียงดนตรีภายในเกมก็สมบรูณ์แบบ ภาพการทิ้งระเบิดใส่สถานที่ตั้งของศัตรูหรือฉากอื่นๆ
+        มันทำให้ผมรู้สึกอินไปกับการเล่นเกม เหมือนได้อยู่บนสมรภูมิรบนั้นจริงๆ
+        ระบบกราฟิกถือเป็นอีกหนึ่งปัจจัยที่เหล่าคอเกม FPS ถวิลหา และขอบอกเลยว่า Call of Duty: Modern Warfare
+        ก็ไม่ทำให้ผิดหวังจริงๆ
+    </div>
+
+    <br><br><br><br><br>
+    <div class="info" >
+        &nbsp;&nbsp;ระบบผู้เล่นหลายคนที่เล่นได้ติดหนึบทุกโหมด
+        ระบบผู้เล่นหลายคนถือเป็นอีกหนึ่งฟีเจอร์ภายในเกมที่ไม่พูดถึงคงไม่ได้ สำหรับ Call of Duty Modern Warfare
+        จะมีโหมดผู้เล่นหลายคนให้เลือกเล่นแยกย่อยลงไป ไล่ไปตั้งแต่โหมดที่มีพื้นที่เล็กๆ ไปจนถึงโหมด Ground War
+        ที่เป็นสมรภูมิขนาดใหญ่แบบจัดเต็มทั้งเฮลิคอปเตอร์ รถถัง ยานเกราะ
+        อาวุธหนักสารพัดชนิดที่พร้อมประเคนให้ทั้งสองฝ่ายเข้ายึดพื้นที่ชิงชัยชนะกันอย่างสุดมันส์
+        โดยส่วนตัวรู้สึกชอบโหมดนี้มากๆ ครับ
+    </div><br>
+    <center><img class="Photo" img src="images/Call of duty/5.png" style="width:60%; border-radius: 20px;"></center>
+    <br><br><br><br><br><br><br>
+    <div class="info" >
+        &nbsp;&nbsp;แต่หากใครที่อยากเล่นโหมดผู้เล่นหลายคนเป็นคลาสสิคๆ หน่อย Team Deathmatch หรือ Domination
+        ก็มีให้เล่นเช่นกัน อีกสิ่งหนึ่งที่ผมชอบก็คือระบบ Kill Streaks ที่เมื่อเราสามารถสังหารศัตรูได้ติดๆ กันหลายๆ
+        คนก็จะสามารถปลดล็อกสกิลพิเศษต่างๆ ที่จะช่วยให้เราสังหารศัตรูมากยิ่งขึ้น ไม่ว่าจะเป็น UAV, Cruise Missile หรือ
+        Juggernaut
+    </div>
+
+    <br><br><br><br><br>
+    <div class="info">
+        &nbsp;&nbsp;ในส่วนโหมด Co-op ของ Call of Duty: Modern Warfare จะเป็นการร่วมมือกันกับเพื่อนในทีม (จำนวน 4 คน)
+        เข้าไปทำภารกิจจ่างๆ ที่ตัวเกมกำหนด ซึ่งเราและเพื่อนๆ จำเป็นต้องต้องร่วมมือ ร่วมใจร่วมฟันฝ่าไปด้วยกัน
+        ซึ่งมันจะยากขึ้นเรื่อยๆ เรียกว่าเล่นได้สนุกใช้ได้เลยทีเดียวครับ
+        นอกจากนี้ยังมีระบบการเก็บเลเวลเพื่อปลดล็อกไอเทมต่างๆ รวมถึงอุปกรณ์เอาไว้แต่งปืนที่เรียกว่า Gun Smith
+        แบบว่าจะแต่งให้สวยงามตามเทรนด์หรือแต่งเอาประสิทธิภาพความแม่นยำในการยิงก็ทำได้
+    </div>
+
+    <br><br><br><br><br>
+    <div class="info" >
+        &nbsp;&nbsp;ข้อเสียที่พบเจอของระบบนี้คือการรอเพื่อนๆ เข้ามาเล่นร่วมกัน ใช้เวลาค่อนข้างนานพอสมควร
+        และการเล่นข้ามแพลตฟอร์มระหว่างกันก็มีปัญหา ไม่ค่อยเสถียรสักเท่าไหร่ อีกอย่างคือ อาวุธบางชนิดดูมันแรงมากๆ
+        และยังไม่มีความสมดุลเท่าไหร่ เชื่อว่าเร็วๆ นี้ทางทีมผู้พัฒนาคงออกแพตช์ออกมาแก้ไขในเร็ววันนะ
+    </div><br>
+    <center><img class="Photo" img src="images/Call of duty/6.jpg" style="width:60%; border-radius: 20px;"></center>
+    <br><br><br><br><br>
+    <div class="info" >
+        &nbsp;&nbsp;สรุปรวมความหลังเล่นเกม
+        ต้องขอบอกว่าหลังจากการวางจำหน่ายของเกม Call of Duty: Modern Warfare 3 ไปเมื่อปี 2011 จากนั้นก็มีเกมซีรี่ส์ Call
+        of Duty ออกตามมากันอีกเพียบ แต่ผมยอมรับโดยตรงแบบไม่อายเลยว่า ผมไม่รู้ไม่อินกับเกม Call of Duty ภาคต่อหลังจาก
+        Modern Warfare 3 เลยสักเกม แบบว่าเล่นไม่จบเลยสักภาค แต่กลับ Call of Duty Modern Warfare ภาคใหม่นี้
+        มันกลับให้ความรู้สึกที่แตกต่างออกไป ความสนุกทั้งในเรื่องของการดำเนินเนื้อเรื่องต่างๆ ภายในเกม
+        เกมเพลย์ที่ยังคงเป็นเอกลักษณ์ กราฟิกสวยงาม สมจริง ระบบผู้เล่นหลายคนที่ติดหนึบ ถือว่าทาง Infinity Ward
+        นั้นเป็นทีมงานระดับโลกอย่างแท้จริง
+    </div>
+
+    <br><br><br><br><br>
+    <div class="info" >
+        &nbsp;&nbsp;อารมณ์ของผมที่ได้กลับมาเล่นเกมนี้อีกครั้งมันก็เหมือนกับได้เจอเพื่อนเก่าหรือเพื่อนรัก
+        สมัยเรียนมัธยมที่กลับมาเจอกันใหม่อีกครั้งในปัจจุบัน ต่างคนต่างก็ได้เล่าเรื่องราวที่ผ่านมาให้กันและกันฟัง
+        สื่อสารเข้าใจกันในทุกๆ เรื่องราว การมาเจอกันในครั้งนี้ทำให้รู้สึกดีเยี่ยม เช่นกันกับการเล่นเกม Call of Duty:
+        Modern Warfare ภาคนี้ ทางทีมงานได้สร้างมาตรฐานและใส่รายละเอียดลงในทุกๆ ส่วน ทำให้เวลาเล่นเกมนี้แล้ว
+        มันมีความสุขมากๆ ครับ
+    </div><br><br><br>
+    <center><img class="Photo" img src="images/Call of duty/4.png" style="width:60%; border-radius: 20px;"></center>
+    <br><br><br><br><br>
+    <div class="info" >
+        &nbsp;&nbsp;สรุปรวมความว่า Call of Duty Modern Warfare คือเกมที่ดีที่สุดของผมในปีนี้เลยละ เอาเป็นว่าเพื่อนๆ
+        ลองไปหาเกมนี้มาเล่นดู แล้วจะรู้ว่าผมไม่ได้พูดเกินจริงไปแม้แต่น้อยเลย ยิ่งใครที่เป็นแฟนเก่าของเกมในซีรี่ส์ Modern
+        Warfare นี่ไม่ควรพลาดด้วยประการทั้งปวง
+    </div>
+    <br><br><br><br><br>
+    <center>
+        <div class="thankyou">
+            ขอขอบคุณข้อมูลจาก<br>
+            <a class="facebook"
+                href="https://www.online-station.net/pc-console-game/view/149644">www.online-station.net</a>
+        </div>
+    </center>
+    <br>
+
+
+    <br><br><br>
+    <center><img src="images/Call of duty/c1.png" width="10%"></center>
+    <br>
+</body>
+
+</html>

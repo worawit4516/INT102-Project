@@ -1,0 +1,366 @@
+
+/* Tubar*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:black;
+  font-family: 'Tomorrow', sans-serif;
+  border-radius: 10px;
+  
+}
+
+li {
+  float:right;
+}
+
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 26px 16px;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+li a:hover {
+  background-color:rgb(40, 43, 44);
+}
+
+/* หัวข้อ */
+p{color: #ddd;
+  font-family: 'Tomorrow', sans-serif;}
+  
+table{
+     color: #ddd;
+    font-family: 'Tomorrow', sans-serif;
+    
+  }
+.colum{color: #ddd;
+    font-family: 'Tomorrow', sans-serif;;
+    font-size: 70px;
+ 
+ }
+ .linecolum{
+margin-top: 10px;
+margin-bottom: 10px;
+
+}
+.Photonews{  border-radius:  10px ;
+}
+
+
+
+
+/* Slideshow container */
+*{box-sizing: border-box}
+
+.mySlides ,.mySlides2 {
+  display: block
+}
+img {vertical-align: middle;}
+
+
+.slideshow-container {
+  max-width: 2200px;
+  position: relative;
+  margin: auto;
+  margin-top: -30px;
+  
+}
+
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+
+.dot {
+  cursor: pointer;
+  height: 5px;
+  width: 5px;
+  margin: 0 2px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color:rgb(11, 213, 226);
+}
+
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* รูปสี่รูปที่มีโอเวอร์เลย์ */
+#rig {
+  max-width:5000px;
+  margin:0 auto; 
+  padding:0;
+  font-size:0; 
+  
+  
+}
+#rig li {
+  display: inline-block;
+  width:100%;
+  vertical-align:middle;
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  
+}
+      
+
+.rig-cell {
+  margin:2.0px;
+  box-shadow:0 0 0px rgb(250, 242, 242);
+  display:block;
+  position: relative;
+  overflow:hidden;
+  border-radius:  10px ;
+  
+}
+      
+
+.rig-img {
+  display:block;
+  width: 100%;
+  height: auto;
+  border:none;
+  transform:scale(1);
+  transition:all 1s;
+  border-radius:  10px ;
+}
+
+#rig li:hover .rig-img {
+  transform:scale(1.05);
+}
+      
+
+.rig-overlay {
+  position: absolute;
+  display:block;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  background: rgb(17, 22, 24) url(img/link.png) no-repeat center 20%;
+  background-size:50px 50px;
+  opacity:0;
+  filter:alpha(opacity=0);
+  transition:all 0.6s;
+}
+#rig li:hover .rig-overlay {
+  opacity:0.8;
+}
+
+
+.rig-text {
+  display:block;
+  padding:0 30px;
+  box-sizing:border-box;
+  position:absolute;
+  left:0;
+  width:100%;
+  text-align:center;
+  text-transform:capitalize;
+  font-size:18px;
+  font-weight:bold;
+  font-family: 'Tomorrow', sans-serif;
+  font-weight:normal!important;
+  top:40%;
+  color:white;
+  opacity:0;
+  filter:alpha(opacity=0);
+  transform:translateY(-20px);
+  transition:all .3s;
+}
+#rig li:hover .rig-text {
+  transform:translateY(0px);
+  opacity:0.9;
+}
+
+@media (max-width: 9000px) {
+  #rig li {
+      width:25%;
+  }
+}
+
+@media (max-width: 700px) {
+  #rig li {
+      width:33.33%;
+  }
+}
+
+@media (max-width: 550px) {
+  #rig li {
+      width:50%;
+  }
+}
+
+
+
+
+/* ข้อมูล */
+.datain {
+  font-size: 30px;
+  color: #ddd;
+  font-family: 'Mitr', sans-serif;
+  
+}
+.datahead{ font-size: 65px;
+  color: #ddd;
+  font-family: 'Mitr', sans-serif;
+  
+}
+.info
+{ 
+  font-size: 25px;
+  color: #ddd;
+  font-family: 'Mitr', sans-serif;
+  margin-left: 290px;
+  margin-top: -50px;
+  width: 39em;
+}  
+
+
+
+.contact{font-size: 100px;
+  color: #ddd;
+  font-family: 'Tomorrow', sans-serif;
+  text-decoration-style: dotted;
+}
+
+.photocontact{font-size: 2em;
+  color: #ddd;
+  font-family: 'Tomorrow', sans-serif;
+ border : 2;
+ 
+}
+
+
+/* link */
+.facebook:link{
+color: #ddd;
+text-decoration: none;
+}
+.facebook:visited {
+  color: #ddd; 
+  text-decoration: none;
+}
+.facebook:hover{color: aqua;}
+
+#cyber:hover{ 
+  transform:translateY(0px);
+  opacity:0.9;
+}
+
+#codmw:hover
+{  transform:translateY(0px);
+  opacity:0.9;
+
+}
+
+.thankyou{
+   font-size: 20px;
+   color: aliceblue;  
+   font-family: 'Mitr', sans-serif;
+}
+.thankyouli:hover{
+  color: aqua;
+}
+
+.ref {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+
+}
+.ref:hover{
+  color: aqua;
+}
+
+body{
+  background: white url(/images/BG02.png) no-repeat center fixed; 
+}
+
+.newspaper {
+  column-count: 2;
+}

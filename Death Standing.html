@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Death Standing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css?family=Tomorrow&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Mitr&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Chakra+Petch&display=swap" rel="stylesheet">
+
+</head>
+
+<body style="background-color: black;">
+
+    <ul>
+        <li><a href="About.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="News.html">News</a></li>
+        <li><a href="Main.html">Home</a></li>
+
+    </ul>
+
+
+    <a href="Main.html"><img src="images/LOGO04.png" width="9%" style="margin-top: -100px; margin-left: 30px;"></a>
+
+    <!-- Slide images  3 รูปบน-->
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="images/Death Standing/Death Standing page 1.1 cut.jpg " style="width:100%">
+            <div class="text"></div></a>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="images/Death Standing/Death Standing page 2.3 cut.jpg" style="width:100%">
+            <div class="text"></div></a>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="images/Death Standing/Death Standing page 2.4 cut.jpg" style="width:100%">
+            <div class="text"></div></a>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+
+    <script>
+
+        var slideIndex = 1;
+
+        var myTimer;
+
+        var slideshowContainer;
+
+        window.addEventListener("load", function () {
+            showSlides(slideIndex);
+            myTimer = setInterval(function () { plusSlides(1) }, 4000);
+
+
+            slideshowContainer = document.getElementsByClassName('slideshow-inner')[0];
+
+
+
+            slideshowContainer.addEventListener('mouseenter', pause)
+            slideshowContainer.addEventListener('mouseleave', resume)
+        })
+
+
+        function plusSlides(n) {
+            clearInterval(myTimer);
+            if (n < 0) {
+                showSlides(slideIndex -= 1);
+            } else {
+                showSlides(slideIndex += 1);
+            }
+
+
+
+            if (n === -1) {
+                myTimer = setInterval(function () { plusSlides(n + 2) }, 4000);
+            } else {
+                myTimer = setInterval(function () { plusSlides(n + 1) }, 4000);
+            }
+        }
+
+
+        function currentSlide(n) {
+            clearInterval(myTimer);
+            myTimer = setInterval(function () { plusSlides(n + 1) }, 4000);
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+
+        pause = () => {
+            clearInterval(myTimer);
+        }
+
+        resume = () => {
+            clearInterval(myTimer);
+            myTimer = setInterval(function () { plusSlides(slideIndex) }, 4000);
+        }
+    </script>
+
+
+
+    <center>
+        <p class="datahead">จุดเด่นของเกม</p>
+    </center>
+    <div class="info">
+        • ภาพกราฟิกสวยงาม การออกแบบตัวละครทำได้ยอดเยี่ยม<br>
+        • Gameplay มีความแปลกใหม่ และน่าสนใจ<br>
+        • เนื้อเรื่องสนุก น่าติดตาม น่าค้นหา<br>
+        • เนื้อหามีให้เล่นเยอะอย่างจุใจ<br>
+        • การแสดงของนักแสดงทุกคนทำได้ยอดเยี่ยมราวกับกำลังดูภาพยนตร์อยู่<br>
+    </div>
+
+
+    <center>
+        <p class="datahead">จุดสังเกต </p>
+    </center>
+    <div class="info">
+        • อาจจะไม่ใช่เกมที่เหมาะสำหรับทุกคน<br>
+        • เรื่องราวและ gameplay อาจจะเข้าใจยากซักนิด หากไม่ติดตามให้ดี<br>
+    </div>
+
+
+
+    <center>
+        <p class="datahead">Story </p>
+    </center>
+
+    <div class="info">
+        &nbsp; &nbsp; &nbsp;จะพูดถึงโลกหลังการล่มสลายของมนุษย์และสิ่งมีชีวิตต่างๆ ไม่ว่าจะเป็นสิ่งมีชีวิตแบบไหนก็ตาม
+        เมื่อตายดวงวิญญาณจะตกไปสู่ The Beach (ชายหาด) สถานที่ซึ่งเปรียบเสมือนโลกหลังความตาย
+        และด้วยสาเหตุบางอย่างทำให้โลกมนุษย์ที่เราอยู่กัน เชื่อมต่อเข้ากับ The Beach ทำให้เหล่า BTs (Beached thing)
+        สิ่งมีชีวิตที่เกยฝั่งแล้วมีบางอย่าง “ติด” ตัวเองบนโลก หรือถ้าจะให้เข้าใจง่ายๆ ก็คือวิญญาณในโลกแห่งความตาย
+        ซึ่งเหล่าวิญญาณพวกนี้พวกเป็นปรปักษ์ต่อชีวิต และพยายามที่จะกลืนกินมนุษย์โลกที่ยังมีชีวิตรอดอยู่
+
+    </div>
+    <br><br><br><br><br>
+    <div class="info">
+        &nbsp; &nbsp; &nbsp;และนั้นทำให้เกิดเหตุการณ์ Voidout ขึ้นตามหลายๆ สถานที่ทั่วโลก โดยมันจะเกิดขึ้นได้ก็ต่อเมื่อ
+        BTs ได้ทำการกลืนกินมนุษย์ ทำให้เกิดเป็นหลุมอุกาบาตขนาดใหญ่ตามที่ตั้งของการตายของบุคคลนั้นๆ ด้วยเหตุการณ์ Voidout
+        ทั่วโลก ทำให้โลกถึงจุดจบ รวมไปถึงสถานที่ต่างๆ ไม่ว่าจะเป็นตึกรามบ้านช่อง ก็ถูกกลืนกินไปพร้อมๆกัน
+        โดยเหตุการณ์โดยรวมทั้งหมดถูกเรียกว่า “Death Stranding”
+    </div>
+    <br><br><br><br><br>
+    <div class="info">
+        &nbsp; &nbsp; &nbsp;“Bridges” เป็นบริษัทที่ก่อตั้งขึ้นเพื่อเชื่อมต่อสังคมที่แตกหักของสหรัฐอเมริกา
+        ผู้คนที่ยังมีชีวิตรอดต่างก็อาศัยอยู่ภายในเมืองใต้ดินที่ถูกสร้างขึ้นจากบริษัท Bridges
+        โดยในเกมนี้เราจะได้รับบทเป็น Sam Porter Bridges (Norman Reedus) ลูกเลี้ยงของประธานาธิบดี Bridget (Lindsay
+        Wagner) โดยหน้าที่ของเรา ก็คือการทำให้อเมริกาสมบูรณ์อีกครั้ง ตามวิสัยทัศน์ของประธานาธิบดี Bridget โดยผ่านระบบ
+        Chiral Network
+        ของบริษัทที่ถูกสร้างขึ้นมาเพื่อเครือข่ายการสื่อสารให้ความคุ้มครองกับมนุษย์ที่อาศัยอยู่ตามเมืองใต้ดินต่างๆ
+        ด้วยการนำเอา Q-pid อุปกรณ์เชื่อมต่อไปตาม Terminal ของเมืองต่างๆ และมันก็เป็นหน้าที่ของ Sam
+        ที่เขาทำหน้าที่ส่งของให้กับเมืองต่างๆ ผ่านการช่วยเหลือของ Deadman (Guillermo del Toro)
+        หัวหน้าด้านการแพทย์ของบริษัท พร้อมกับ Die-Hardman (Tommie Earl Jenkins) ผู้บังคับบัญชาของ Bridges พร้อมกับ Mama
+        (Margaret Qualley) ผู้ที่มีความสัมพันธ์อะไรบางอย่างกับ BTs และ Heartman (Nicolas Winding Refn)
+        ชายที่หัวใจจะหยุดเต้นทุกๆ 21 นาที และตาย 3 นาที ก่อนที่จะฟื้นขึ้น
+        เขาเป็นนักค้นคว้าและวิจัยเกี่ยวกับสาเหตุที่ทำให้เกิดเหตุการณ์ Death Stranding ขึ้นมา
+    </div>
+    <br><br><br><br><br>
+
+    <div class="info">
+        &nbsp; &nbsp; &nbsp;และด้วยเหตุการณ์บางอย่างที่เกิดขึ้นมาแบบไม่ทันตั้งตัว ทำให้ Sam ต้องไปพัวพันกับ Fragile
+        (Emily O’Brien) จากบริษัท Fragile Express ที่ได้มาพบกับ Sam โดยบังเอิญ โดยเธอได้เสนอให้มาร่วมงานด้วยกัน
+        อีกทั้งเธอยังมีความสามารถในการเคลื่อนที่ผ่าน The Beach ได้อีกด้วย พร้อมกับ BB (Bridge baby) และ Cliff (Mads
+        Mikkelsen)
+    </div>
+    <br><br>
+    <center><img class="Photo" img src="images/Death Standing/Extra02.jpg" style="width:60%; border-radius: 20px;">
+    </center>
+
+
+    <center>
+        <p class="datahead">Gameplay </p>
+    </center>
+
+    <div class="info">
+        &nbsp; &nbsp; &nbsp; อย่างที่ได้บอกไปแล้วว่า Death Stranding มันคือเกมแนวใหม่ หรือ New Genre
+        แต่พื้นฐานแล้วมันก็ยังคงเป็นเกม Open World Sandbox โดยหน้าที่หลักๆของเราก็คือการ “ส่งของ” อย่างไรก็ตาม
+        ตัวเกมก็ยังเพิ่มรูปแบบการเล่นอื่นๆเข้ามา เช่นระบบ Stealth และระบบ Online ที่คล้าย ๆ กับเกมอย่าง Dark Souls
+        ผสมรวมกันจนออกมาเป็น “Strand Game” ตามที่ Hideo Kojima ได้ให้คำนิยามเอาไว้
+    </div>
+
+    <br><br><br><br><br>
+    <div class="info">
+        &nbsp; &nbsp; &nbsp;ระบบการเล่นหลักๆ ก่อนที่เราจะออกลุย เราจะต้องเลือก Mission ผ่านเครื่อง Terminal
+        โดยรายละเอียดของ Mission หลักๆ คือการส่งของจากสถานที่หนึ่งไปอีกสถานที่หนึ่ง บางครั้งจะมี Mission พิเศษ
+        เช่นการส่ง Pizza ที่ต้องไปส่งให้ไวตามเวลาที่กำหนด รางวัลที่ได้จากการทำ Mission สำเร็จ ก็คือยอดไลค์ที่จะได้จาก
+        NPC และวัตถุดิบสำหรับการคราฟไอเทม หรืออุปกรณ์ต่างๆ เพื่อใช้ในการส่งของครั้งต่อไป เมื่อเลือก Mission แล้ว
+        ก็ต้องเลือกอุปกรณ์ที่เราจะเอาติดตัวไปด้วยเพื่อใช้ตามสถานการณ์ต่างๆ
+    </div><br>
+    <br>
+    <center><img class="Photo" img src="images/Death Standing/Extra01.jpg" style="width:60%; border-radius: 20px;">
+    </center>
+
+    <br><br><br><br><br>
+    <div class="info">
+        &nbsp; &nbsp; &nbsp;นอกจากนี้เอง การเลือกทางเดินก็สำคัญเช่นกัน ตลอดทั้งเกมเราจะสามารถใช้เจ้า Odradek
+        หรือเครื่องที่อยู่ตรงไหล่ด้านหลังเรา ในการสแกนมองหาจุดทางเดินต่างๆได้ โดยจะแบ่งเป็นระดับสี เช่น
+        หากเป็นทางที่อันตรายต่อการลื่นล้ม มันก็จะแสดงออกมาเป็นสีแดง
+        เราสามารถดูตรงจุดนี้ได้เพื่อเลือกที่จะเดินไปในทางที่ปลอดภัยมากกว่าหรือก็คือสีฟ้า
+        นอกจากนี้มันยังมีอีกหนึ่งความสามารถ นั้นก็คือการตรวจจับพวก BTs อีกด้วย
+    </div>
+
+
+    <br><br><br><br><br>
+    <div class="info">
+        &nbsp; &nbsp; &nbsp;ในระหว่างทางเราอาจจะเจอกับพวก BTs ได้ โดยมันจะมาพร้อมกับ Timefall (ฝนตก) ซึ่งจะทำให้ Cargo
+        ของเราเสียหาย และถ้าหากเราเข้าใกล้ BTs เมื่อไร เจ้าเครื่อง Odradek ก็จะทำงาน และส่งสัญญาณให้เรารู้ได้ทันที
+        โดยมันจะหันหน้าเข้าหา BTs โดยจะแบ่งเป็นระดับสีและความไวในการหมุน ถ้าหากมันหมุนเร็วขึ้นเมื่อไรและเปลี่ยนเป็นสีส้ม
+        แสดงว่า BTs มันอยู่ใกล้เรามาก แต่ถ้าหากมันเป็นสีขาว และหมุนไม่เร็วมาก แสดงว่ามันยังอยู่ไกล
+    </div>
+
+
+    <br><br><br><br><br>
+    <div class="info">
+        &nbsp; &nbsp; &nbsp;การ Stealth ในเกม Death Stranding นั้นเรียกได้ว่าฉีกกฎของวิดีโอเกมไปเลยทีเดียว
+        เพราะคราวนี้ศัตรูของเรา “มันไม่ใช่คน” แต่มันคือ BTs หรือก็คือวิญญาณชนิดหนึ่ง โดยเราจะมองไม่เห็นมัน
+        แต่มันจะมองเห็นเรา แน่นอนว่าเจ้าเครื่อง Odradek จะบอกตำแหน่งให้เรา แต่วิธีการที่จะมองเห็นมันนั้น ก็คือการใช้ BB
+        (Bridge baby) เป็นตัวสื่อ โดยเราจะต้องเชื่อมต่อกับ BB และอยู่นิ่ง ๆ เพื่อที่จะเห็นมันได้
+        และวิธีที่จะไม่ให้มันเห็นเราก็คือการกลั้นหายใจนั้นเอง
+    </div>
+
+
+    <br><br><br><br><br>
+    <div class="info">
+        &nbsp; &nbsp; &nbsp;เราสามารถต่อสู้กับเจ้า BTs ได้ โดยภายในเกมนี้ Sam จะมีพลังบางอย่างที่ติดตัวมาเรียกว่า DOOMS
+        คนที่มีพลังนี้เมื่อตายแล้วจะถูกส่งไปยัง The Beach เขาจะต้องมองหา Strand ของตัวเอง
+        และกลับเข้าสู่ร่างในโลกความเป็นจริงได้ เราสามารถฆ่าพวก BTs ได้ โดยการใช้เลือดของ Sam เอง
+        โดยภายในเกมนี้จะมีอาวุธให้เราเลือกใช้เช่น ปืนชนิดต่าง ๆ ที่บรรจุกระสุนพร้อมกับเลือดของ Sam
+        และระเบิดที่อัดไปด้วยเลือดของ Sam แต่ข้อควรระวังคือถ้าหากเราใช้เลือดมากเกินไป เราอาจจะตายได้
+        เพราะเลือดมันก็คือพลังชีวิตของผู้เล่นเอง
+    </div><br><br>
+    <center><img class="Photo" img src="images/Death Standing/Extra03.jpg" style="width:60%; border-radius: 20px;">
+    </center>
+
+
+    <br><br><br><br>
+    <div class="info">
+        &nbsp; &nbsp; &nbsp;พวก BTs มี 3 ประเภท คือ Grazer จะอยู่บนฟ้าคอยตรวจหาแซม ทันทีที่พวกมันเจอเราแล้ว ตัวที่เป็น
+        Hunter จะพยายามไล่ล่าเรา สังเกตุได้จากรอยเท้าที่มันทิ้งเอาไว้ ถ้าจับเราได้ มันจะส่งงานต่อให้ Catcher
+        ที่ความสามารถของมันคือจะลากเราลงเข้าสู่อีกมิตินึง เวลาเราเจอสถานการณ์แบบนี้มี 2 ทางเลือกคือ หนี หรือ สู้
+    </div>
+
+    <br><br><br><br><br>
+    <div class="info">
+        &nbsp; &nbsp; &nbsp;ทุกๆครั้งที่เราส่งของเสร็จ เราจะได้วัตถุดิบสำหรับการคราฟโดยจะแบ่งออกไปหลายประเภท
+        โดยเราจะสามารถทำการคราฟได้ที่เครื่อง Terminal ของเมืองต่างๆ โดยผ่านระบบ Chiral Printer
+        ไม่ว่าจะเป็นอุปกรณ์ช่วยในการเดินทาง ชุดเกราะเหล็กสำหรับช่วยในการเดินตามสภาพภูมิประเทศที่ไม่ดี
+        รวมไปถึงอาวุธทุกชนิด และยานพาหนะอีกด้วย
+    </div>
+
+
+    <br><br><br><br><br>
+    <div class="info">
+        &nbsp; &nbsp; &nbsp;การเดินทางภายในเกมนี้สามารถทำได้หลายรูปแบบ ไม่ว่าจะเป็นการเดินเท้าปกติหรือแม้แต่ใช้ยานพาหนะ
+        ภายในเกมมียานพาหนะให้เราเลือกใช้ไม่เยอะมาก หลักๆก็จะมีมอเตอร์ไซด์กับรถบรรทุกขนาดกลาง
+    </div>
+
+    <br><br><br><br><br>
+    <div class="info">
+        &nbsp; &nbsp; &nbsp;สำหรับสิ่งก่อสร้างอื่นๆภายในเกมก็จะมีพวกสะพานขนาดใหญ่ ที่เอาไว้ข้ามทางหน้าผา
+        หรือแม่น้ำขนาดใหญ่ที่รถไม่สามารถผ่านได้ ที่เหลือก็จะเป็นพวกสิ่งก่อสร้างประเภท Watch Tower
+        ขนาดใหญ่ที่สามารถใช้ในการตรวจสอบรอบๆแผนที่ได้ รวมไปถึงพวก Generator ที่เอาไว้ชาจชาร์จแบตยานพาหนะ
+        หรืออุปกรณ์ที่ต้องใช้แบตเตอรี่ที่เราสวมใส่อยู่
+        โดยสิ่งก่อสร้างทั้งหมดนี้มันจะถูกแชร์ให้ผู้เล่นคนอื่นๆได้ใช้งานผ่านระบบ Online ของเกมนี้
+    </div>
+
+
+    <br><br><br><br><br>
+    <div class="info">
+        &nbsp; &nbsp; &nbsp;มาพูดถึงฉาก Action กันบ้าง แน่นอนว่าเกมนี้มีฉาก Action ให้เห็นอยู่บ้างตลอดทั้งเกม
+        นอกจากเจ้าพวก BTs ที่เราจะต้องต่อสู้ด้วยแล้ว ก็ยังมีเหล่ามนุษย์ด้วยกันเองที่เป็นศัตรูกับเรา
+        โดยเจ้าพวกนี้มักจะขโมยกล่องส่งสินค้าหรือ Cargo ของนักส่งของ เพื่อที่จะเอาไปใช้เป็นของตัวเอง
+        โดยมันจะวางทุ่นระบุตำแหน่งแบบ Beacon เอาไว้ตามจุดต่างๆในแผนที่ ถ้าหากเราเดินผ่านเมื่อไรล่ะก็ พวกมันจะรู้ตัว
+        และรีบวิ่งมาหาเราทันที
+    </div>
+
+
+    <br><br><br><br><br>
+    <div class="info">
+        &nbsp; &nbsp; &nbsp;วิธีต่อสู้กับพวกมันก็มีหลายแบบ ไม่ว่าจะเป็นการ Stealth โดยการย่องไปด้านหลังมันแล้วจัดการ
+        หรือใครที่ชอบการต่อสู้แบบซึ่ง ๆ หน้า ก็สามารถทำได้โดยการใช้กล่องส่งสินค้า Cargo ของเราขว้างใส่ศัตรู
+        หรือเอาไปฟาดหน้ามันตรง ๆ เลยก็ได้ แต่ถ้าหากเราสู้กับมันจนหมดแรง และถูกจับได้ มันก็จะขโมยกล่องสินค้าของเราไป
+        พร้อมกับเอาตัวเราไปทิ้งไว้ไกล ๆ เป็นภาระที่เราจะต้องตามกลับไปเก็บของคืน
+    </div>
+
+
+    <br><br><br><br><br>
+    <div class="info">
+        &nbsp; &nbsp; &nbsp;Death Stranding มีโหมดมัลติเพลเยอร์คล้ายกับ Dark Souls
+        เราไม่สามารถดึงผู้เล่นคนอื่นมาเล่นด้วยกันแบบ Coop ได้โดยตรง แต่จะเป็นการช่วยกันเล่นแบบทางอ้อม
+        เราจะเห็นร่องรอยของเกมเมอร์คนอื่นทิ้งเอาไว้
+        ซึ่งผู้เล่นคนอื่นสามารถช่วยได้โดยทิ้งสิ่งของไว้ในโลกเพื่อคุณหรือปรากฏเป็นร่างสีขาวในอีกด้านหนึ่งและดรอปไอเทมวางสิ่งของทิ้งไว้
+        เพื่อช่วยเหลือให้เราเดินทางไปจุดหมายปลายทางได้สะดวกขึ้น เช่น เราอาจจะเห็นบันไดข้ามแม่น้ำวางทิ้งไว้
+        จากเกมเมอร์คนอื่น หรือมีคนสร้างอาคารทิ้งไว้ ทำให้เราเดินทางไปต่อง่ายขึ้น เราสามารถกดไลค์ ได้
+        เพื่อเป็นการรีวิวจุดช่วยตรงนี้ ให้ผู้เล่นคนอื่นได้ คิด วิเคราะห์ว่า จุดช่วยตรงนี้มันดีจริงหรือไม่ การมาของ
+        TimeFall จะทำให้สิ่งก่อสร้างของมนุษย์นั้นเสื่อมสภาพลง และฟื้นฟูบางพื้นที่กลับสู่สภาพเดิม
+    </div>
+
+
+    <br><br><br><br><br>
+    <div class="info">
+        &nbsp; &nbsp; &nbsp;นั่นเป็นเหตุผลที่โคจิมะคอยบอกเสมอว่า “ช่วยกันเชื่อมต่อ”
+        เพราะการเล่นเกมในโลกนี้ค่อนข้างเหงาและลำบากด้วยตัวคนเดียว
+        การที่มีเกมเมอร์ทั่วโลกช่วยกันในทางอ้อมจึงเป็นแนวคิดเกมแนว Strand ขึ้นมา
+    </div>
+
+    <br>
+    <br>
+
+    <center>
+        <div class="thankyou">
+            ขอขอบคุณข้อมูลจาก<br>
+            <a class="facebook"
+                href="https://www.beartai.com/review/games/374649">www.beartai.com/review/games/374649</a>
+        </div>
+    </center>
+
+    </div> <br>
+    <center><img src="images/Death Standing/d2.png" width="20%"></center>
+    <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+<link href="https://fonts.googleapis.com/css?family=Tomorrow&display=swap" rel="stylesheet">
+font-family: 'Tomorrow', sans-serif;
+
+<link href="https://fonts.googleapis.com/css?family=Poiret+One&display=swap" rel="stylesheet"> 
+font-family: 'Poiret One', cursive;
+
+<link href="https://fonts.googleapis.com/css?family=Share&display=swap" rel="stylesheet">
+font-family: 'Share', cursive;
+
+<link href="https://fonts.googleapis.com/css?family=Special+Elite&display=swap" rel="stylesheet">  
+font-family: 'Special Elite', cursive;

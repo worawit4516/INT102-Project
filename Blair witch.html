@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Blair witch</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css?family=Tomorrow&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Chakra+Petch&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Mitr&display=swap" rel="stylesheet">
+</head>
+
+<body style="background-color: black;">
+
+    <ul>
+        <li><a href="About.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="News.html">News</a></li>
+        <li><a href="index.html">Home</a></li>
+
+    </ul>
+    <a href="index.html"><img src="images/LOGO04.png" width="9%" style="margin-top: -100px; margin-left: 30px;"></a>
+
+
+    <!-- Slide images  3 รูปบน-->
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="images/Blair witch/blair-witch- page 2.3 cut.jpg " style="width:100%">
+            <div class="text"></div></a>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="images/Blair witch/blair-witch- page  2.2 cut.jpg" style="width:100%">
+            <div class="text"></div></a>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="images/Blair witch/blair-witch- page 2.1 cut.jpg" style="width:100%">
+            <div class="text"></div></a>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+
+    <script>
+
+        var slideIndex = 1;
+
+        var myTimer;
+
+        var slideshowContainer;
+
+        window.addEventListener("load", function () {
+            showSlides(slideIndex);
+            myTimer = setInterval(function () { plusSlides(1) }, 4000);
+
+
+            slideshowContainer = document.getElementsByClassName('slideshow-inner')[0];
+
+
+
+            slideshowContainer.addEventListener('mouseenter', pause)
+            slideshowContainer.addEventListener('mouseleave', resume)
+        })
+
+
+        function plusSlides(n) {
+            clearInterval(myTimer);
+            if (n < 0) {
+                showSlides(slideIndex -= 1);
+            } else {
+                showSlides(slideIndex += 1);
+            }
+
+
+
+            if (n === -1) {
+                myTimer = setInterval(function () { plusSlides(n + 2) }, 4000);
+            } else {
+                myTimer = setInterval(function () { plusSlides(n + 1) }, 4000);
+            }
+        }
+
+
+        function currentSlide(n) {
+            clearInterval(myTimer);
+            myTimer = setInterval(function () { plusSlides(n + 1) }, 4000);
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+
+        pause = () => {
+            clearInterval(myTimer);
+        }
+
+        resume = () => {
+            clearInterval(myTimer);
+            myTimer = setInterval(function () { plusSlides(slideIndex) }, 4000);
+        }
+    </script>
+
+  <center><p class="datahead">จุดเด่นของเกม </p> </center>
+    <div class="info" style="margin-left: 400px;">
+        • การนำเสนอด้านงานศิลป์ที่สวยงาม โดยเฉพาะโทนในเกมที่แม้จะใช้สี<br>
+        และพื้นที่ไม่เยอะแต่กลับทำให้ดูมีมิติและน่ากลัวได้ (แต่เกมค่อนข้างมืดมากๆ)<br><br>
+        • ปริศนาที่ท้าทาย สดใหม่ ระบบเพื่อนคู่หูอย่างน้องหมา <br>และอุปกรณ์ในยุค 90
+        ที่ใช้เพื่อเอาตัวรอดทำออกมาได้ดีมาก<br><br>
+        • การประยุกต์หรือ Adapt เรื่องราวจากภาพยนตร์ดัง Blair Witch
+        <br>มากกว่าจะลอกทุกอย่างมาใช้ภายในเกมทำได้น่าประทับใจ<br><br>
+        • เกมมีความยาวที่พอเหมาะพอเจาะสำหรับเกมแนวนี้ คือราว ๆ 7-8 ชั่วโมง <br>(บางคนอาจเล่นจบได้ไวกว่า
+        อยู่ที่ว่าจะแก้ปริศนาและสำรวจมากน้อยแค่ไหน)<br><br>
+        • ดนตรีและ Effect ประกอบทำได้ดีมากๆ ทำให้เกมดูน่ากลัวขึ้นหลายเท่า <br>ตั้งแต่เสียงเหยียบกิ่งไม้ เสียงดนตรีบิ้ว
+        หรือ Effect อื่นๆ ที่เราจะได้ยินเวลา<br>เดินในป่าตอนกลางคืนทำให้คุณต้องระแวงระหวัง(หลัง) แทบจะตลอดเวลา<br><br>
+        • ราคามิตรภาพเพียง 379 บาทสำหรับโซนไทย (Steam) <br>คุ้มค่ามากกับคุณภาพและประสบการณ์ทีได้รับ<br><br>
+    </div>
+    <center><img class="Photo" img src="images/Blair witch/Extra02.jpg" style="width:60%; border-radius: 20px; ">
+    </center>
+
+<center><p class="datahead">จุดสังเกต </p> </center>
+    <div class="info"style="margin-left: 400px;">
+        • บัค สำหรับผู้เขียนส่วนตัวเหมือนจะโชคดีมาก เพราะไม่เจอบัคตั้งแต่ต้นจนจบเกม <br>
+        ในขณะที่ผู้เล่นจำนวนมากกลับเจอบัคที่บางคนถึงขนาดทำให้เล่นเกมไม่ได้ <br>(ปัจจุบันผู้พัฒนาออก Patch
+        มาแก้ไขแล้วค่ะ)<br><br>
+        • หากคุณเป็นแฟนหนัง Blair Witch แบบเดนตายและคาดหวังความเหมือน<br> 100%
+        อาจจะทำให้ผิดหวังได้เหมือนกัน เพราะตัวเกมจะเน้นการ Adapt <br>หรือหยิบยืมไอเดียมาใช้เสียมากกว่าจะลอกมาแบบเต็ม
+        ๆ<br><br>
+        • การเล่นในตอนท้ายของตัวเกมยืดเยื้อไปเล็กน้อย หากลดเนื้อเรื่องบางจุดได้ <br>จะทำให้เกมนี้กลมกล่อมชนิด Perfect
+        มากๆ
+
+    </div>
+
+
+<center> <p class="datahead">Story </p> </center>
+
+    <div class="info">
+        &nbsp; &nbsp; &nbsp;
+        ในเกมคุณจะได้รับบทเป็นอดีตเจ้าหน้าที่ตำรวจชื่อ เอลลิส ซึ่งได้เข้าไปช่วยเหลือคดีเด็กหาย
+        ที่ล่าสุดมีรายงานว่าได้หายตัวไป ณ ป่าแบล็คฮิลล์ ในรัฐ Maryland ของสหรัฐอเมริกา
+        (ใช้สถานที่เดียวกับฉบับภาพยนตร์เป๊ะๆ) โดยเรื่องราวนั้นดำเนินในปี 1996
+        คุณจะมีน้องหมาคู่หูที่จะทำการเข้าไปสำรวจด้วย น้องหมาชื่อ Bullet
+    </div>
+
+    <br><br><br><br><br>
+    <div class="info" >
+        &nbsp; &nbsp; &nbsp;จุดเด่นของเกมเพลย์คือ การใช้ “กล้องวิดีโอ” ที่ไม่ต่างอะไรจากภาพยนตร์
+        ซึ่งเจ้ากล้องวิดีโอนี้มีหน้าที่หลายอย่าง ไม่ว่าจะเป็นเบาะแสในการตามหาเด็กชายที่หายตัวไป หรือ
+        การแก้ปริศนาภายในเกม ที่ผู้เขียนได้เล่นแล้วต้องขอบอกเลยว่าออกแบบมาได้ดีมากๆ (ย้ำว่ามากๆ)
+        มันสดใหม่ไม่เหมือนเกมอื่นที่เคยเล่นมาก่อน ตอนแรกอาจจะดูยาก แต่ถ้าจับทางได้แล้วจะสนุกมากๆ
+        ตัวเกมไม่อาจเรียกได้ว่าเป็น Open World หรือโลกเปิด แม้คุณจะสำรวจบริเวณป่าได้ค่อนข้างกว้างขวาง
+        แต่มันจะเปลี่ยนแปลงและสลับการเล่าไปมา ระหว่าง อดีต ปัจจุบัน
+        ซึ่งทำให้ในพื้นที่เดิมกลับดูมีมิติแม้จะไม่ได้ใหญ่อะไรมากมายนัก และบอกเลยว่าคุณจะหลงทางแน่นอน
+    </div> <br><br><br>
+    <center><img class="Photo" img src="images/Blair witch/Extra01.jpg" style="width:60%; border-radius: 20px; ">
+    </center>
+    <br><br><br><br><br>
+    <div class="info">
+        &nbsp; &nbsp; &nbsp;น้องหมา Bullet ไม่ใช่แค่ของประกอบฉาก หรือ คู่หูที่น่ารำคาญ
+        กลับกันมันคือเพื่อนสื่อสัตว์ที่รู้ใจ ที่พึ่งพาเดียวของคุณที่ทำให้พอจะลดความกลัวลงได้บ้าง Bullet
+        มีหน้าที่ค้นหาหลักฐานที่เราพบเพื่อนำไปสู่พื้นที่ใหม่ๆ
+        และยังคอยช่วยบอกถึงอันตรายที่เข้าใกล้ตัวเราโดยมันจะเห่าและมีภาษากายที่แปลกไปอย่างชัดเจน
+        ขณะเดียวกันมันก็คือสุนัขตัวหนึ่งเท่านั้น อย่าปล่อยให้มันอยู่อย่างดียวดาย คุณสามารถเล่นกับมัน, ลูบหัว
+        และให้อาหารมันได้ อีกสิ่งหนึ่งที่เห็นแล้วร้องกรี๊ดเลยก็คือ “โทรศัพท์มือถือ!” ทว่ามันไม่ใช่ iPhone หรือ
+        Smartphone แบบในปัจจุบัน แต่มันเป็นโทรศัพท์แบบในยุค ตัวโทรศัพท์ใช้งานได้ไม่ต่างจากของจริง
+        แถมยังมีผลต่อเกมเพลย์ด้วยนะ จะโทรออก รับสาย ส่งข้อความ หรือ เล่นเกม นอกจากนี้ก็ยังมี
+        วิทยุสื่อสารและไฟฉายที่ใช้ในการสำรวจและเอาตัวรอดภายในเกม
+    </div>
+    <br><br><br><br><br>
+    <div class="info" >
+        &nbsp; &nbsp; &nbsp;เรื่องระดับความหลอนของเกม ต้องบอกว่าตัวเกมไม่ใช่ธีม “ผี” ในแบบฉบับผีไทย เกมจะมีปริศนา
+        และมีสิ่งลี้ลับบางอย่างที่เราหาคำตอบไม่ได้ ตัวเกมเรียกได้ว่าดัดแปลงจากภาพยนตร์
+        นำบางอย่างมากประยุกต์มากกว่าจะลอกมาซะดื้อๆ ซึ่งบอกตรงๆ ว่าประทับใจมาก ที่มันมีความเหมือนและต่างในเวลาเดียวกัน
+        เพราะคุณจะคาดเดาหลายอย่างไม่ได้เลยต่อให้ดูภาพยนตร์มาแล้วก็ตาม
+        เกมจะเล่นกับจิตใจของผู้เล่นมากกว่าจะหลอกให้กลัวตรงๆ ซึ่งมันสร้างความกดดันมาก อย่างยิ่งในตอนท้ายของเกม
+        ที่จะกดดันแบบถี่ๆ ชนิดไม่ทันได้หายใจ ส่วนมุข Jump Scare มีแน่นอน แต่ไม่ได้รู้สึกว่าเยอะจนน่ารำคาญอะไร
+        ก็ออกมาได้ในบทที่มันควรจะออก ถือว่าทำได้ดี
+    </div>
+<br>
+    <center>
+        <div class="thankyou">
+            ขอขอบคุณข้อมูลจาก<br>
+            <a class="facebook"
+                href="https://m.thisisgamethailand.com/content/Review-Blair-Witch.html">m.thisisgamethailand.com/content/Review-Blair-Witch.html</a>
+        </div>
+    </center>
+
+
+    <center><img src="images/Blair witch/b1.png" width="20%"></center>
+    <br>
+</body>
+
+</html>
